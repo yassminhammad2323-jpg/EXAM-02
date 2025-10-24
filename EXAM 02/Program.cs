@@ -26,7 +26,7 @@
                 sub.CreateEx(FlExam);
               
             }
-            else
+            else if (examType == 2)
             {
                 Practical_Exam pracExam = new Practical_Exam(40, 1);
 
@@ -36,10 +36,12 @@
                 mcqAnswers[2] = new Answers(3, "volt");
                 mcqAnswers[3] = new Answers(4, "watte");
 
-                pracExam.Questions[1] = new MCQ("Q1", "Resistanc unit is ?", 1, 2, mcqAnswers);
+                pracExam.Questions[0] = new MCQ("Q1", "Resistanc unit is ?????", 1, 1, mcqAnswers);
                 
                 sub.CreateEx(pracExam);
                 
+            } else  { Console.WriteLine("Invalid Exam Type");
+                return;
             }
 
             Console.WriteLine(sub);

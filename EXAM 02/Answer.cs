@@ -18,7 +18,7 @@ namespace EXAM_02
 
         public override string ToString()
         {
-            return AnswerId + "is" + AnswerText;
+            return AnswerId + "." + AnswerText;
         }
     }
 }

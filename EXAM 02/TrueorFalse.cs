@@ -24,8 +24,7 @@ namespace EXAM_02
         }
                public override void DisQues()
         {
-            Console.WriteLine("\t" + Header);
-            Console.WriteLine(Body);
+           
             for (int i = 0; i < Answerlist.Length; i++)
                 Console.WriteLine(Answerlist[i]);
         }

@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace EXAM_02
 {
     internal class Final_Exam : Exam
-    {  
-        public Final_Exam(int time, int numofque):base(time, numofque)
+    {
+        public Final_Exam(int time, int numofque) : base(time, numofque)
         {
-           
+
         }
 
         public override void ShowExam()
@@ -21,17 +21,18 @@ namespace EXAM_02
             for (int i = 0; i < Questions.Length; i++)
             {
                 Question ques = Questions[i];
-               Console.WriteLine(ques.ToString());
-
+                Console.WriteLine(ques.ToString());
+                ques.DisQues();
                 Console.Write("Enter your answer (number): ");
                 int answerId = int.Parse(Console.ReadLine());
-                
+
                 totalMark += ques.Mark;
                 if (ques.RightAnswer.AnswerId == answerId)
                     studentMark += ques.Mark;
-            }
+                Console.WriteLine("Grade is : " + studentMark + " from " + totalMark);
 
-            Console.WriteLine("Grade is : " + studentMark + " from " + totalMark);
+            }
         }
     }
+    
 }

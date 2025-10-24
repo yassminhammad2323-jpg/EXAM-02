@@ -17,6 +17,7 @@ namespace EXAM_02
             {
                 Question ques = Questions[i];
                 Console.WriteLine(ques.ToString());
+                ques.DisQues();
                 Console.Write("Enter your answer (number): ");
                 int answerId = int.Parse(Console.ReadLine());
 
